@@ -145,13 +145,10 @@ setErrors({});
 const verifyEmailOTP = async () => {
 
   if (otpCode.length !== 6) {
-
     setErrors({
       otp: "يجب إدخال 6 أرقام"
     });
-
     return;
-
   }
 
   setIsVerifying(true);
@@ -162,32 +159,23 @@ const verifyEmailOTP = async () => {
       .from("email_verifications")
       .select("*")
       .eq("email", formData.email2)
-      .order("created_at", { ascending: false })
-      .limit(1)
-      .single();
+      .eq("otp", otpCode)
+      .gt("expires_at", new Date().toISOString())
+      .limit(1);
 
     if (error) throw error;
 
-    if (!data) {
-      throw new Error("لم يتم العثور على الكود");
+    if (!data || data.length === 0) {
+      throw new Error("الكود غير صحيح أو انتهت صلاحيته");
     }
-
-if (data.otp !== otpCode) {
-   throw new Error("الكود غير صحيح");
-}
-
-if (
-   new Date(data.expires_at) < new Date()
-) {
-   throw new Error("انتهت صلاحية الكود");
-}
 
     setIsEmailVerified(true);
 
     await supabase
-    .from("email_verifications")
-    .delete()
-    .eq("email", formData.email2);
+      .from("email_verifications")
+      .delete()
+      .eq("email", formData.email2);
+
     setIsOtpSent(false);
 
     setErrors({});
@@ -203,7 +191,6 @@ if (
     setIsVerifying(false);
 
   }
-
 };
 
   const saveToSupabase = async () => {
