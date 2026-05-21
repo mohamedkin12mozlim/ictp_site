@@ -28,7 +28,7 @@ const SecondRegistrationFlow: React.FC<SecondRegistrationFlowProps> = ({ theme, 
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [todayDate] = useState(new Date().toLocaleDateString('ar-EG'));
-  const [isEmailVerified, setIsEmailVerified] = useState(false);
+  const [isEmailVerified, setIsEmailVerified] = useState(true);
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [otpCode, setOtpCode] = useState('');
   const [isSendingOtp, setIsSendingOtp] = useState(false);
@@ -70,12 +70,12 @@ const SecondRegistrationFlow: React.FC<SecondRegistrationFlowProps> = ({ theme, 
     }
 
     if (formData.nationalId.length !== 14) newErrors.nationalId = "يرجى إدخال الرقم القومي المكون من ١٤ رقم";
-    if (!formData.email.trim() || !formData.email.includes('@')) newErrors.email = "بريد إلكتروني غير صالح";
+    //if (!formData.email.trim() || !formData.email.includes('@')) newErrors.email = "بريد إلكتروني غير صالح";
     if (!formData.whatsapp.trim()) newErrors.whatsapp = "مطلوب";
     if (!formData.faculty.trim()) newErrors.faculty = "مطلوب";
     if (!formData.applicantStatus) newErrors.applicantStatus = "يرجى اختيار الصفة";
     if (!formData.registrationType) newErrors.registrationType = "يرجى اختيار نوع التسجيل";
-    if (!isEmailVerified) newErrors.email = "يجب التحقق من البريد الإلكتروني أولاً";
+    //if (!isEmailVerified) newErrors.email = "يجب التحقق من البريد الإلكتروني أولاً";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
