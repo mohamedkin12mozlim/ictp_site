@@ -159,7 +159,7 @@ const verifyEmailOTP = async () => {
       .from("email_verifications")
       .select("*")
       .eq("email", formData.email2)
-      .eq("otp", otpCode)
+      .eq("otp", otpCode.replace(/\s/g, ""))
       .gt("expires_at", new Date().toISOString())
       .limit(1);
 
