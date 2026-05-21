@@ -139,31 +139,33 @@ setErrors({});
 
 const verifyEmailOTP = async () => {
 
-  if (otpCode.replace(/\s/g, "").length !== 6) {
-    setErrors({
-      otp: "يجب إدخال 6 أرقام"
-    });
-    return;
-  }
-
   setIsVerifying(true);
 
   try {
 
-    const cleanOTP = otpCode.replace(/\s/g, "");
+    // حذف أي مسافات أو رموز من الكود
+    const cleanOTP = otpCode.replace(/\D/g, "");
+
+    if (cleanOTP.length !== 6) {
+      throw new Error("يجب إدخال 6 أرقام");
+    }
+
+    console.log("OTP typed:", cleanOTP);
 
     const { data, error } = await supabase
       .from("email_verifications")
       .select("*")
-      .eq("email", formData.email)
-      .eq("otp", cleanOTP)
-      .limit(1);
+      .eq("email", formData.email);
 
     if (error) throw error;
 
-    console.log("Found:", data);
+    console.log("DB Data:", data);
 
-    if (!data || data.length === 0) {
+    const matched = data?.find(
+      (item:any) => item.otp?.toString().trim() === cleanOTP
+    );
+
+    if (!matched) {
       throw new Error("الكود غير صحيح");
     }
 
@@ -172,7 +174,8 @@ const verifyEmailOTP = async () => {
     await supabase
       .from("email_verifications")
       .delete()
-      .eq("email", formData.email);
+      .eq("email", formData.email)
+      .eq("otp", cleanOTP);
 
     setIsOtpSent(false);
 
@@ -189,8 +192,8 @@ const verifyEmailOTP = async () => {
     setIsVerifying(false);
 
   }
-};
 
+};
   const saveToSupabase = async () => {
     try {
       await supabase.from('registrations').insert([{
