@@ -10,12 +10,12 @@ interface FirstRegistrationFormProps {
 
 const FirstRegistrationForm: React.FC<FirstRegistrationFormProps> = ({ data, date }) => {
   const optionalCourses = [
-    'الشبكات',
-    'تطبيقات المحمول',
+    'الشبكات Networks',
+    'تطبيقات المحمول Mobile applicaions',
     'قواعد البيانات Database-Access',
-    'الفصول الافتراضية',
-    'البحث عبر الانترنت',
-    'الحوسبة السحابية'
+    'التعلم عن بعد Learnung Distance',
+    'البحث عبر الانترنت Web',
+    'الحوسبة السحابية Cloud Computing',
   ];
 
   const pageStyles: React.CSSProperties = {
