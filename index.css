@@ -1,0 +1,53 @@
+
+@import "tailwindcss";
+
+/* Unified Typography System */
+:root {
+  --font-primary: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-normal antialiased transition-colors duration-700;
+    @apply bg-[#F8FAFC] text-slate-900;
+    @apply dark:bg-[#020617] dark:text-white;
+  }
+
+  h1 { @apply text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1]; }
+  h2 { @apply text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.2]; }
+  h3 { @apply text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.3]; }
+  
+  p, span, div {
+    @apply leading-relaxed;
+  }
+}
+
+/* Custom Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Fluid Typography Helpers */
+.heading-premium {
+  @apply font-bold tracking-tight;
+  font-family: var(--font-primary);
+}
+
+.body-clean {
+  @apply font-normal leading-relaxed text-slate-600 dark:text-slate-400;
+  font-family: var(--font-primary);
+}
+
+/* Navbar Adjustments */
+.nav-link-refined {
+  @apply relative py-1 text-sm font-semibold tracking-wide transition-all duration-300;
+}
+
+/* Smooth RTL adjustments */
+[lang="ar"] .rtl-spacing {
+  @apply tracking-normal;
+}
