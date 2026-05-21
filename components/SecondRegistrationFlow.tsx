@@ -148,38 +148,68 @@ const verifyEmailOTP = async () => {
 
   try {
 
-    // حذف أي مسافات أو رموز من الكود
-    const cleanOTP = otpCode.replace(/\D/g, "");
+    // تنظيف الكود والإيميل
+    const cleanOTP = otpCode.replace(/\D/g, "").trim();
+    const cleanEmail = formData.email2.trim().toLowerCase();
 
     if (cleanOTP.length !== 6) {
       throw new Error("يجب إدخال 6 أرقام");
     }
 
     console.log("OTP typed:", cleanOTP);
+    console.log("Email:", cleanEmail);
 
     const { data, error } = await supabase
       .from("email_verifications")
       .select("*")
-      .eq("email", formData.email2);
+      .eq("email", cleanEmail);
 
     if (error) throw error;
 
     console.log("DB Data:", data);
 
-    const matched = data?.find(
-      (item:any) => item.otp?.toString().trim() === cleanOTP
+    if (!data || data.length === 0) {
+      throw new Error("لم يتم العثور على كود");
+    }
+
+    // نجيب أحدث كود
+    const latestOTP = data.sort(
+      (a:any, b:any) =>
+      new Date(b.expires_at).getTime() -
+      new Date(a.expires_at).getTime()
+    )[0];
+
+    console.log("Latest OTP:", latestOTP);
+
+    // التحقق من الكود
+    if (latestOTP.otp.toString().trim() !== cleanOTP) {
+      throw new Error("الكود غير صحيح");
+    }
+
+    // التحقق من الصلاحية
+    const now = new Date().getTime();
+    const expireTime = new Date(
+      latestOTP.expires_at
+    ).getTime();
+
+    console.log(
+      "Now:",
+      now,
+      "Expire:",
+      expireTime
     );
 
-    if (!matched) {
-      throw new Error("الكود غير صحيح");
+    if (now > expireTime) {
+      throw new Error("انتهت صلاحية الكود");
     }
 
     setIsEmailVerified(true);
 
+    // حذف الكود بعد نجاح التحقق
     await supabase
       .from("email_verifications")
       .delete()
-      .eq("email", formData.email2)
+      .eq("email", cleanEmail)
       .eq("otp", cleanOTP);
 
     setIsOtpSent(false);
@@ -187,6 +217,8 @@ const verifyEmailOTP = async () => {
     setErrors({});
 
   } catch (err:any) {
+
+    console.log("Verify Error:", err);
 
     setErrors({
       otp: err.message || "فشل التحقق"
@@ -197,7 +229,6 @@ const verifyEmailOTP = async () => {
     setIsVerifying(false);
 
   }
-
 };
   const saveToSupabase = async () => {
     try {

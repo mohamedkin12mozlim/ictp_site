@@ -18,9 +18,11 @@ const otp = Math.floor(
 100000 + Math.random() * 900000
 ).toString();
 
-const expiryTime = new Date(
-Date.now() + 10 * 60 * 1000
-).toISOString();
+// إضافة 10 دقائق مع ضبط التوقيت المحلي
+const expiryDate = new Date();
+expiryDate.setMinutes(expiryDate.getMinutes() + 10);
+
+const expiryTime = expiryDate.toISOString();
 
 await supabase
 .from("email_verifications")
