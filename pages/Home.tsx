@@ -80,16 +80,16 @@ const Home: React.FC = () => {
         </div>
 
         <div className="max-w-5xl mx-auto text-center z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className={`inline-block px-6 py-2 rounded-full border text-[10px] font-bold mb-6 ${
-              theme === 'dark' ? 'bg-white/5 border-white/10 text-[#38BDF8]' : 'bg-blue-50 border-blue-100 text-[#002D9C]'
-            } backdrop-blur-md`}
-          >
-            {t('home.badge')}
-          </motion.div>
+          
+            //initial={{ opacity: 0, y: 30 }}
+            //animate={{ opacity: 1, y: 0 }}
+            //transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            //className={`inline-block px-6 py-2 rounded-full border text-[10px] font-bold mb-6 ${
+             // theme === 'dark' ? 'bg-white/5 border-white/10 text-[#38BDF8]' : 'bg-blue-50 border-blue-100 text-[#002D9C]'
+            //} backdrop-blur-md`}
+          //>
+            //</div>{t('home.badge')}
+          //</motion.div>
 
           
           <div className="overflow-hidden mb-8">
