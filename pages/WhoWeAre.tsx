@@ -164,7 +164,7 @@ category: "متخصصين المحتوى",
 
 
 const categories = [
-  { id: 'dev', title: "الادارة التنفيذية", icon: <Monitor size={24} /> },
+  { id: 'executive', title: "الإدارة التنفيذية", icon: <Monitor size={24} /> },
   { id: 'dev', title: "متخصصين برمجة", icon: <Monitor size={24} /> },
   { id: 'design', title: "متخصصين UI/UX", icon: <Palette size={24} /> },
   { id: 'video', title: "متخصص فيديو", icon: <Video size={24} /> },
