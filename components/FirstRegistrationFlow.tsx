@@ -226,20 +226,42 @@ const verifyEmailOTP = async () => {
   }
 };
 //--------------------------------
-  const saveToSupabase = async () => {
-    try {
-      await supabase.from('registrations').insert([{
-        full_name_ar: formData.nameAr,
-        full_name_en: formData.nameEn,
-        national_id: formData.nationalId,
-        phone: formData.whatsapp,
-        email: formData.email,
-        college: formData.faculty
-      }]);
-    } catch (err) {
-      console.error(err);
+const saveToSupabase = async () => {
+
+  try {
+
+    const { data, error } = await supabase
+      .from('registrations')
+      .insert([
+        {
+          full_name_ar: formData.nameAr,
+          full_name_en: formData.nameEn,
+          national_id: formData.nationalId,
+          phone: formData.whatsapp,
+          email: formData.email,
+          college: formData.faculty
+        }
+      ])
+      .select();
+
+    console.log("DATA:", data);
+    console.log("ERROR:", error);
+
+    if (error) {
+      alert(error.message);
+      return false;
     }
-  };
+
+    return true;
+
+  } catch (err) {
+
+    console.log("CATCH ERROR:", err);
+    alert("حصل خطأ");
+
+    return false;
+  }
+};
 
   return (
     <div key="registration-flow-first">
@@ -425,7 +447,15 @@ const verifyEmailOTP = async () => {
                 <Edit3 size={20} /> تعديل البيانات
               </button>
               <button 
-                onClick={() => { saveToSupabase(); window.print(); }}
+                onClick={async () => {
+
+  const saved = await saveToSupabase();
+
+  if (saved) {
+    window.print();
+  }
+
+}}
                 className={`flex items-center justify-center gap-3 px-8 py-4 ${theme === 'dark' ? 'bg-[#38BDF8] text-slate-900 hover:bg-[#60A5FA]' : 'bg-[#002D9C] text-white hover:bg-[#001D6E]'} rounded-2xl font-bold transition-all shadow-lg active:scale-95`}
               >
                 <Download size={20} /> تحميل PDF
