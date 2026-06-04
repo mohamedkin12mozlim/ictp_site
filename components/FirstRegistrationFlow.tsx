@@ -155,9 +155,12 @@ const verifyEmailOTP = async () => {
     console.log("Email:", cleanEmail);
     console.log("Searching for:", cleanEmail); 
     const { data, error } = await supabase
-      .from("email_verifications")     
-      .select("*")
-      .ilike("email", cleanEmail);
+  .from("email_verifications")
+  .select("*")
+  .eq("email", cleanEmail)
+  .order("created_at", { ascending: false })
+  .limit(1);
+  console.log(data);
 
     if (error) throw error;
 
