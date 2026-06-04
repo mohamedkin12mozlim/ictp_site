@@ -144,8 +144,13 @@ const verifyEmailOTP = async () => {
   try {
 
     // تنظيف الكود والإيميل
-    const cleanOTP = otpCode.replace(/\D/g, "").trim();
+    const cleanOTP = otpCode
+  .replace(/\s/g, "")
+  .replace(/\D/g, "")
+  .trim();
     const cleanEmail = formData.email.trim().toLowerCase();
+console.log("DB OTP:", latestOTP.otp);
+console.log("USER OTP:", cleanOTP);
 
     if (cleanOTP.length !== 6) {
       throw new Error("يجب إدخال 6 أرقام");
@@ -180,7 +185,11 @@ const verifyEmailOTP = async () => {
     console.log("Latest OTP:", latestOTP);
 
     // التحقق من الكود
-    if (latestOTP.otp.toString().trim() !== cleanOTP) {
+    if (
+  latestOTP.otp.toString().replace(/\s/g, "").trim()
+  !==
+  cleanOTP
+) {
       throw new Error("الكود غير صحيح");
     }
 
