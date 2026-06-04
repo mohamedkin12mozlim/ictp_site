@@ -284,7 +284,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <div className="h-[500px] rounded-[3rem] overflow-hidden border-8 border-white/5">
-                <img src="/assets/2.JPG" className="w-full h-full object-cover" />
+                <img src="/assets/build.JPG" className="w-full h-full object-cover" />
               </div>
             </AnimatedSection>
             <div>
