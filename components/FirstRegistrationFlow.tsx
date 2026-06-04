@@ -151,6 +151,7 @@ const verifyEmailOTP = async () => {
     const cleanEmail = formData.email.trim().toLowerCase();
 console.log("DB OTP:", latestOTP.otp);
 console.log("USER OTP:", cleanOTP);
+console.log("OTP STATE:", otpCode);
 
     if (cleanOTP.length !== 6) {
       throw new Error("يجب إدخال 6 أرقام");
@@ -371,12 +372,21 @@ const saveToSupabase = async () => {
                     <div className={`space-y-4 p-5 rounded-2xl border border-dashed ${theme === 'dark' ? 'bg-slate-900 border-slate-700' : 'bg-blue-500/5 border-[#002D9C]/30'}`}>
                       <label className={`text-xs font-black uppercase ${theme === 'dark' ? 'text-[#38BDF8]' : 'text-[#002D9C]'}`}>أدخل الرمز المكون من ٦ أرقام</label>
                       <div className="flex gap-2">
-                        <input 
-                          type="text" maxLength={6} value={otpCode}
-                          onChange={(e) => setOtpCode(e.target.value)}
-                          placeholder="000000"
-                          className={`flex-grow py-3 px-4 border-2 rounded-xl font-mono font-bold tracking-[0.4em] text-center focus:outline-none focus:ring-2 ${theme === 'dark' ? 'focus:ring-[#38BDF8] border-slate-700' : 'focus:ring-[#002D9C] border-[#002D9C]/10'} ${inputBg}`}
-                        />
+<input
+  type="text"
+  maxLength={6}
+  value={otpCode}
+  onChange={(e) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setOtpCode(value);
+  }}
+  placeholder="000000"
+  className={`flex-grow py-3 px-4 border-2 rounded-xl text-center focus:outline-none focus:ring-2 ${
+    theme === 'dark'
+      ? 'focus:ring-[#38BDF8] border-slate-700'
+      : 'focus:ring-[#002D9C] border-[#002D9C]/10'
+  } ${inputBg}`}
+/>
                         <button onClick={verifyEmailOTP} disabled={isVerifying} className={`px-6 rounded-xl font-bold text-sm transition-all ${theme === 'dark' ? 'bg-[#38BDF8] text-slate-900 hover:bg-[#60A5FA]' : 'bg-[#002D9C] text-white hover:bg-[#001D6E]'}`}>
                           {isVerifying ? <Loader2 size={18} className="animate-spin" /> : "تحقق"}
                         </button>
