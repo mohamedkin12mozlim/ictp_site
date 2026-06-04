@@ -145,72 +145,74 @@ const verifyEmailOTP = async () => {
 
     // تنظيف الكود والإيميل
     const cleanOTP = otpCode
-  .replace(/\s/g, "")
-  .replace(/\D/g, "")
-  .trim();
-    const cleanEmail = formData.email.trim().toLowerCase();
-console.log("DB OTP:", latestOTP.otp);
-console.log("USER OTP:", cleanOTP);
-console.log("OTP STATE:", otpCode);
+      .replace(/\s/g, "")
+      .replace(/\D/g, "")
+      .trim();
 
+    const cleanEmail = formData.email
+      .trim()
+      .toLowerCase();
+
+    // التأكد إن الكود 6 أرقام
     if (cleanOTP.length !== 6) {
       throw new Error("يجب إدخال 6 أرقام");
     }
 
     console.log("OTP typed:", cleanOTP);
     console.log("Email:", cleanEmail);
-    console.log("Searching for:", cleanEmail); 
-    const { data, error } = await supabase
-  .from("email_verifications")
-  .select("*")
-  .eq("email", cleanEmail)
-  .order("created_at", { ascending: false })
-  .limit(1);
-  console.log(data);
 
-    if (error) throw error;
+    // البحث عن أحدث كود للإيميل
+    const { data, error } = await supabase
+      .from("email_verifications")
+      .select("*")
+      .eq("email", cleanEmail)
+      .order("created_at", { ascending: false })
+      .limit(1);
+
+    if (error) {
+      console.log("Supabase Error:", error);
+      throw new Error("حدث خطأ أثناء البحث عن الكود");
+    }
 
     console.log("DB Data:", data);
 
+    // لو مفيش كود
     if (!data || data.length === 0) {
       throw new Error("لم يتم العثور على كود");
     }
 
-    // نجيب أحدث كود
-    const latestOTP = data.sort(
-      (a:any, b:any) =>
-      new Date(b.expires_at).getTime() -
-      new Date(a.expires_at).getTime()
-    )[0];
+    // أحدث OTP
+    const latestOTP = data[0];
 
-    console.log("Latest OTP:", latestOTP);
+    console.log("DB OTP:", latestOTP.otp);
+    console.log("USER OTP:", cleanOTP);
+    console.log("OTP STATE:", otpCode);
 
-    // التحقق من الكود
-    if (
-  latestOTP.otp.toString().replace(/\s/g, "").trim()
-  !==
-  cleanOTP
-) {
+    // مقارنة الكود
+    const dbOTP = latestOTP.otp
+      .toString()
+      .replace(/\s/g, "")
+      .trim();
+
+    if (dbOTP !== cleanOTP) {
       throw new Error("الكود غير صحيح");
     }
 
-    // التحقق من الصلاحية
+    // التحقق من انتهاء الصلاحية
     const now = new Date().getTime();
+
     const expireTime = new Date(
       latestOTP.expires_at
     ).getTime();
 
-    console.log(
-      "Now:",
-      now,
-      "Expire:",
-      expireTime
-    );
+    console.log("Now:", now);
+    console.log("Expire:", expireTime);
 
     if (now > expireTime) {
       throw new Error("انتهت صلاحية الكود");
     }
 
+    // تم التحقق
     setIsEmailVerified(true);
 
     // حذف الكود بعد نجاح التحقق
@@ -218,11 +220,13 @@ console.log("OTP STATE:", otpCode);
       .from("email_verifications")
       .delete()
       .eq("email", cleanEmail)
-      .eq("otp", cleanOTP);
+      .eq("otp", dbOTP);
 
     setIsOtpSent(false);
 
     setErrors({});
+
+    console.log("OTP VERIFIED SUCCESS");
 
   } catch (err:any) {
 
@@ -237,7 +241,9 @@ console.log("OTP STATE:", otpCode);
     setIsVerifying(false);
 
   }
+
 };
+
 //--------------------------------
 const saveToSupabase = async () => {
 
