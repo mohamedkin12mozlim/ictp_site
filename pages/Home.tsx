@@ -243,7 +243,7 @@ const Home: React.FC = () => {
           </div>
           <AnimatedSection>
             <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-3xl group border-8 border-white/5">
-              <img src="" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <img src="assets/images/build.jpg" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <div className="relative">
                   <motion.div 
@@ -284,7 +284,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <div className="h-[500px] rounded-[3rem] overflow-hidden border-8 border-white/5">
-                <img src="" className="w-full h-full object-cover" />
+                <img src="assets/images/2.jpg" className="w-full h-full object-cover" />
               </div>
             </AnimatedSection>
             <div>
