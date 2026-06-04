@@ -153,11 +153,11 @@ const verifyEmailOTP = async () => {
 
     console.log("OTP typed:", cleanOTP);
     console.log("Email:", cleanEmail);
-
+    console.log("Searching for:", cleanEmail); 
     const { data, error } = await supabase
-      .from("email_verifications")
+      .from("email_verifications")     
       .select("*")
-      .eq("email", cleanEmail);
+      .ilike("email", cleanEmail);
 
     if (error) throw error;
 
@@ -242,8 +242,8 @@ const saveToSupabase = async () => {
           college: formData.faculty
         }
       ])
+      
       .select();
-
     console.log("DATA:", data);
     console.log("ERROR:", error);
 

@@ -19,7 +19,9 @@ export default async function handler(req: any, res: any) {
 
   try {
 
-    const { email } = req.body;
+    const email = req.body.email
+  .trim()
+  .toLowerCase();
 
     const otp = Math.floor(
       100000 + Math.random() * 900000
@@ -47,7 +49,7 @@ export default async function handler(req: any, res: any) {
     // إرسال الإيميل
     await resend.emails.send({
 
-      from: "onboarding@resend.dev",
+      from:"noreply@ictpgate.com",
 
       to: email,
 
