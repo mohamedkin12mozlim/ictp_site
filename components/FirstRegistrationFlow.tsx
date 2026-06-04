@@ -94,7 +94,7 @@ const sendEmailOTP = async () => {
 
   try {
 const response = await fetch(
-  "/.netlify/functions/send-otp",
+  "/api/send-otp",
   {
     method: "POST",
     headers: {
