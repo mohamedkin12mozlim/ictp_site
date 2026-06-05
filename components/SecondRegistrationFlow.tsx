@@ -28,7 +28,7 @@ const SecondRegistrationFlow: React.FC<SecondRegistrationFlowProps> = ({ theme, 
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [todayDate] = useState(new Date().toLocaleDateString('ar-EG'));
-  const [isEmailVerified, setIsEmailVerified] = useState(true);
+  const [isEmailVerified, setIsEmailVerified] = useState(false);
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [otpCode, setOtpCode] = useState('');
   const [isSendingOtp, setIsSendingOtp] = useState(false);
@@ -70,12 +70,12 @@ const SecondRegistrationFlow: React.FC<SecondRegistrationFlowProps> = ({ theme, 
     }
 
     if (formData.nationalId.length !== 14) newErrors.nationalId = "يرجى إدخال الرقم القومي المكون من ١٤ رقم";
-    //if (!formData.email.trim() || !formData.email.includes('@')) newErrors.email = "بريد إلكتروني غير صالح";
+    if (!formData.email.trim() || !formData.email.includes('@')) newErrors.email = "بريد إلكتروني غير صالح";
     if (!formData.whatsapp.trim()) newErrors.whatsapp = "مطلوب";
     if (!formData.faculty.trim()) newErrors.faculty = "مطلوب";
     if (!formData.applicantStatus) newErrors.applicantStatus = "يرجى اختيار الصفة";
     if (!formData.registrationType) newErrors.registrationType = "يرجى اختيار نوع التسجيل";
-    //if (!isEmailVerified) newErrors.email = "يجب التحقق من البريد الإلكتروني أولاً";
+    if (!isEmailVerified) newErrors.email = "يجب التحقق من البريد الإلكتروني أولاً";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -159,10 +159,12 @@ const verifyEmailOTP = async () => {
     console.log("OTP typed:", cleanOTP);
     console.log("Email:", cleanEmail);
 
-    const { data, error } = await supabase
-      .from("email_verifications")
-      .select("*")
-      .eq("email", cleanEmail);
+const { data, error } = await supabase
+  .from("email_verifications")
+  .select("*")
+  .eq("email", cleanEmail)
+  .order("expires_at", { ascending: false })
+  .limit(1);
 
     if (error) throw error;
 
@@ -173,11 +175,7 @@ const verifyEmailOTP = async () => {
     }
 
     // نجيب أحدث كود
-    const latestOTP = data.sort(
-      (a:any, b:any) =>
-      new Date(b.expires_at).getTime() -
-      new Date(a.expires_at).getTime()
-    )[0];
+const latestOTP = data[0];
 
     console.log("Latest OTP:", latestOTP);
 
@@ -232,7 +230,7 @@ const verifyEmailOTP = async () => {
 };
   const saveToSupabase = async () => {
     try {
-      await supabase.from('Second_registrations').insert([{
+      await supabase.from('Second_registrations').upsert({
         se_full_name_ar: formData.nameAr,
         se_full_name_en: formData.nameEn,
         se_national_id: formData.nationalId,
@@ -403,7 +401,13 @@ const verifyEmailOTP = async () => {
 
               <div className="pt-10 flex justify-end">
                 <button
-                  onClick={() => validate() && setStep(2)}
+                  onClick={() => {
+  if (!isEmailVerified) return;
+
+  if (validate()) {
+    setStep(2);
+  }
+}}
                   className={`flex items-center gap-4 px-12 py-5 ${theme === 'dark' ? 'bg-[#38BDF8] text-slate-900 hover:bg-[#60A5FA]' : 'bg-[#002D9C] text-white hover:bg-[#001D6E]'} rounded-2xl font-bold text-lg transition-all shadow-xl group ${!isEmailVerified ? 'opacity-50 cursor-not-allowed grayscale' : 'hover:-translate-y-1 active:scale-95'}`}
                 >
                   المتابعة <ArrowLeft className="group-hover:translate-x-1 transition-transform" />
