@@ -47,7 +47,7 @@ const videoGuides = [
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className={`inline-block px-4 py-1.5 rounded-full border text-[10px] font-bold uppercase tracking-[0.3em] mb-8 ${
+            className={`inline-block px-4 py-1.5 rounded-full border text-[10px] font-black tracking-normal mb-8 ${
                 theme === 'dark' ? 'bg-blue-500/10 border-blue-500/20 text-blue-400' : 'bg-blue-50/50 border-blue-100 text-blue-600'
             }`}
           >

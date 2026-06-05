@@ -281,7 +281,7 @@ className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-ind
 <motion.div
 initial={{ opacity: 0, scale: 0.8 }}
 animate={{ opacity: 1, scale: 1 }}
-className={`inline-block px-5 py-2 rounded-full border text-[10px] font-black uppercase tracking-[0.4em] mb-10 backdrop-blur-xl ${
+className={`inline-block px-5 py-2 rounded-full border text-[10px] font-black tracking-normal ${
 isDark
 ? 'bg-blue-500/10 border-blue-500/20 text-blue-400'
 : 'bg-blue-100 border-blue-200 text-blue-600'
