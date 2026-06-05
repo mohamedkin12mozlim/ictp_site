@@ -245,6 +245,7 @@ const verifyEmailOTP = async () => {
 };
 
 //--------------------------------
+const saveToSupabase = async () => {
 const { data, error } = await supabase
   .from('registrations')
   .upsert(
