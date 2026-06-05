@@ -38,7 +38,7 @@ const SecondRegistrationFlow: React.FC<SecondRegistrationFlowProps> = ({ theme, 
     nameAr: '',
     nameEn: '',
     nationalId: '',
-    email2: '',
+    email: '',
     whatsapp: '',
     faculty: '',
     applicantStatus: '',
@@ -70,15 +70,15 @@ const SecondRegistrationFlow: React.FC<SecondRegistrationFlowProps> = ({ theme, 
     }
 
     if (formData.nationalId.length !== 14) newErrors.nationalId = "يرجى إدخال الرقم القومي المكون من ١٤ رقم";
-    if (!formData.email2.trim() || !formData.email2.includes('@')) {
-  newErrors.email2 = "بريد إلكتروني غير صالح";
+    if (!formData.email.trim() || !formData.email.includes('@')) {
+  newErrors.email = "بريد إلكتروني غير صالح";
 }
     if (!formData.whatsapp.trim()) newErrors.whatsapp = "مطلوب";
     if (!formData.faculty.trim()) newErrors.faculty = "مطلوب";
     if (!formData.applicantStatus) newErrors.applicantStatus = "يرجى اختيار الصفة";
     if (!formData.registrationType) newErrors.registrationType = "يرجى اختيار نوع التسجيل";
     if (!isEmailVerified) {
-  newErrors.email2 = "يجب التحقق من البريد الإلكتروني أولاً";
+  newErrors.email = "يجب التحقق من البريد الإلكتروني أولاً";
 }
 
     setErrors(newErrors);
@@ -87,10 +87,10 @@ const SecondRegistrationFlow: React.FC<SecondRegistrationFlowProps> = ({ theme, 
 
 const sendEmailOTP = async () => {
 
-  if (!formData.email2 || !formData.email2.includes('@')) {
+  if (!formData.email || !formData.email.includes('@')) {
     setErrors({
       ...errors,
-      email2: "يرجى إدخال بريد إلكتروني صالح"
+      email: "يرجى إدخال بريد إلكتروني صالح"
     });
     return;
   }
@@ -107,7 +107,7 @@ const response = await fetch(
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      email: formData.email2
+      email: formData.email
     })
   }
 );
@@ -135,7 +135,7 @@ setErrors({});
   } catch (err: any) {
 
     setErrors({
-      email2: err.message || "فشل إرسال الرمز"
+      email: err.message || "فشل إرسال الرمز"
     });
 
   } finally {
@@ -154,7 +154,7 @@ const verifyEmailOTP = async () => {
 
     // تنظيف الكود والإيميل
     const cleanOTP = otpCode.replace(/\D/g, "").trim();
-    const cleanEmail = formData.email2.trim().toLowerCase();
+    const cleanEmail = formData.email.trim().toLowerCase();
 
     if (cleanOTP.length !== 6) {
       throw new Error("يجب إدخال 6 أرقام");
@@ -239,7 +239,7 @@ await supabase.from('Second_registrations').upsert({
   se_full_name_en: formData.nameEn,
   se_national_id: formData.nationalId,
   se_phone: formData.whatsapp,
-  se_email: formData.email2,
+  se_email: formData.email,
   se_college: formData.faculty
 });
     } catch (err) {
@@ -314,12 +314,12 @@ await supabase.from('Second_registrations').upsert({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <InputGroup
-                    label={text.services.email2}
-                    type="email2"
+                    label={text.services.email}
+                    type="email"
                     placeholder="user@example.com"
-                    value={formData.email2}
-                    error={errors.email2}
-                    onChange={(val) => { setFormData({ ...formData, email2: val }); setIsEmailVerified(false); setIsOtpSent(false); }}
+                    value={formData.email}
+                    error={errors.email}
+                    onChange={(val) => { setFormData({ ...formData, email: val }); setIsEmailVerified(false); setIsOtpSent(false); }}
                     theme={theme}
                     inputBg={inputBg}
                     disabled={isEmailVerified}
@@ -450,7 +450,7 @@ await supabase.from('Second_registrations').upsert({
                     <SecondRegistrationForm
   data={{
     ...formData,
-    email: formData.email2
+    email: formData.email
   }}
   date={todayDate}
 />
@@ -465,7 +465,7 @@ await supabase.from('Second_registrations').upsert({
   <SecondRegistrationForm
     data={{
       ...formData,
-      email: formData.email2
+      email: formData.email
     }}
     date={todayDate}
   />
