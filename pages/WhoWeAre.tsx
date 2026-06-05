@@ -29,7 +29,7 @@ const teamData: TeamMember[] = [
 
 {
 id: 'radwa',
-name: "رضوى أمير",
+name: "د/ رضوى أمير صلاح سيد",
 role: "المدير التنفيذي للمشروع",
 description: "قيادة وإدارة المشروع والإشراف على تنفيذ الرؤية العامة للفريق.",
 fullDescription:
