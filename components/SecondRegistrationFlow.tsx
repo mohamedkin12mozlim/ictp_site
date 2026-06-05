@@ -232,21 +232,43 @@ const latestOTP = data[0];
 
   }
 };
-  const saveToSupabase = async () => {
-    try {
-await supabase.from('Second_registrations').upsert({
-  se_full_name_ar: formData.nameAr,
-  se_full_name_en: formData.nameEn,
-  se_national_id: formData.nationalId,
-  se_phone: formData.whatsapp,
-  se_email: formData.email,
-  se_college: formData.faculty
-});
-    } catch (err) {
-      console.error(err);
-    }
-  };
+const saveToSupabase = async () => {
 
+  try {
+
+    const { data, error } = await supabase
+      .from('Second_registrations')
+      .insert([
+        {
+          se_full_name_ar: formData.nameAr,
+          se_full_name_en: formData.nameEn,
+          se_national_id: formData.nationalId,
+          se_phone: formData.whatsapp,
+          se_email: formData.email,
+          se_college: formData.faculty
+        }
+      ])
+      .select();
+
+    console.log("DATA:", data);
+    console.log("ERROR:", error);
+
+    if (error) {
+      alert(error.message);
+      return false;
+    }
+
+    return true;
+
+  } catch (err) {
+
+    console.log("CATCH ERROR:", err);
+
+    alert("حصل خطأ");
+
+    return false;
+  }
+};
   return (
     <div key="registration-flow-second">
       <div className="flex justify-center mb-12 no-print items-center gap-4">
@@ -445,7 +467,15 @@ await supabase.from('Second_registrations').upsert({
                 <Edit3 size={20} /> تعديل البيانات
               </button>
               <button 
-                onClick={() => { saveToSupabase(); window.print(); }}
+onClick={async () => {
+
+  const saved = await saveToSupabase();
+
+  if (saved) {
+    window.print();
+  }
+
+}}
                 className={`flex items-center justify-center gap-3 px-8 py-4 ${theme === 'dark' ? 'bg-[#38BDF8] text-slate-900 hover:bg-[#60A5FA]' : 'bg-[#002D9C] text-white hover:bg-[#001D6E]'} rounded-2xl font-bold transition-all shadow-lg active:scale-95`}
               >
                 <Download size={20} /> تحميل PDF
