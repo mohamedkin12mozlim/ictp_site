@@ -15,10 +15,18 @@ const Guidelines: React.FC = () => {
   const subTextColor = theme === 'dark' ? 'text-slate-400' : 'text-slate-600';
   const cardBg = theme === 'dark' ? 'bg-slate-900/60 border-white/10 shadow-2xl backdrop-blur-xl' : 'bg-white/90 border-slate-200 shadow-xl backdrop-blur-xl';
 
-  const videoGuides = [
-    { title: t('guidelines.video1'), duration: "4:20" },
-    { title: t('guidelines.video2'), duration: "6:15" },
-  ];
+const videoGuides = [
+  {
+    title: t('guidelines.video1'),
+    duration: "4:20",
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_1"
+  },
+  {
+    title: t('guidelines.video2'),
+    duration: "0.40",
+    videoUrl: "https://youtu.be/X_6SPKPc6TE"
+  },
+];
 
   const faqItems = t('guidelines.faqItems') as unknown as { q: string, a: string }[];
 
@@ -67,15 +75,13 @@ const Guidelines: React.FC = () => {
                 className={`group cursor-pointer rounded-[32px] overflow-hidden transition-all duration-500 flex flex-col sm:flex-row h-full border hover:shadow-2xl ${cardBg}`}
               >
                 <div className={`w-full sm:w-1/2 aspect-video sm:aspect-auto bg-[#001133] relative overflow-hidden`}>
-
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div 
-                      whileHover={{ scale: 1.15 }}
-                      className={`w-14 h-14 rounded-full ${theme === 'dark' ? 'bg-slate-800/40 border-slate-500' : 'bg-white/20 border-white'} backdrop-blur-md flex items-center justify-center border transition-transform duration-500`}
-                    >
-                      <Play fill="white" size={24} className={`text-white ${language === 'ar' ? 'mr-1' : 'ml-1'}`} />
-                    </motion.div>
-                  </div>
+                 <iframe
+                 className="absolute inset-0 w-full h-full"
+                 src={guide.videoUrl}
+                 title={guide.title}
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                 allowFullScreen
+                   />
                 </div>
                 <div className={`p-8 flex flex-col justify-center flex-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                   <div className={`flex items-center gap-2 mb-2 rtl:flex-row-reverse`}>
