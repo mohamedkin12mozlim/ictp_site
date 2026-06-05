@@ -245,24 +245,24 @@ const verifyEmailOTP = async () => {
 };
 
 //--------------------------------
-const saveToSupabase = async () => {
-
-  try {
-
-    const { data, error } = await supabase
-      .from('registrations')
-      .insert([
-        {
-          full_name_ar: formData.nameAr,
-          full_name_en: formData.nameEn,
-          national_id: formData.nationalId,
-          phone: formData.whatsapp,
-          email: formData.email,
-          college: formData.faculty
-        }
-      ])
-      
-      .select();
+const { data, error } = await supabase
+  .from('registrations')
+  .upsert(
+    [
+      {
+        full_name_ar: formData.nameAr,
+        full_name_en: formData.nameEn,
+        national_id: formData.nationalId,
+        phone: formData.whatsapp,
+        email: formData.email,
+        college: formData.faculty
+      }
+    ],
+    {
+      onConflict: 'email'
+    }
+  )
+  .select();
     console.log("DATA:", data);
     console.log("ERROR:", error);
 
