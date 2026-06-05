@@ -19,12 +19,12 @@ const videoGuides = [
   {
     title: t('guidelines.video1'),
     duration: "4:20",
-    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_1"
+    videoUrl: "https://www.youtube.com/embed/X_6SPKPc6TE"
   },
   {
     title: t('guidelines.video2'),
-    duration: "0.40",
-    videoUrl: "https://www.youtube.com/watch?v=X_6SPKPc6TE"
+    duration: "0:40",
+    videoUrl: "https://www.youtube.com/embed/X_6SPKPc6TE"
   },
 ];
 
@@ -76,12 +76,14 @@ const videoGuides = [
               >
                 <div className={`w-full sm:w-1/2 aspect-video sm:aspect-auto bg-[#001133] relative overflow-hidden`}>
                  <iframe
-                 className="absolute inset-0 w-full h-full"
-                 src={guide.videoUrl}
-                 title={guide.title}
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                 allowFullScreen
-                   />
+  className="absolute inset-0 w-full h-full"
+  src={guide.videoUrl}
+  title={guide.title}
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+/>
                 </div>
                 <div className={`p-8 flex flex-col justify-center flex-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                   <div className={`flex items-center gap-2 mb-2 rtl:flex-row-reverse`}>
