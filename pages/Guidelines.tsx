@@ -24,7 +24,7 @@ const videoGuides = [
   {
     title: t('guidelines.video2'),
     duration: "0.40",
-    videoUrl: "https://youtu.be/X_6SPKPc6TE"
+    videoUrl: "https://www.youtube.com/watch?v=X_6SPKPc6TE"
   },
 ];
 
