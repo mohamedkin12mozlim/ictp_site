@@ -31,7 +31,7 @@ interface TeamMember {
   };
 }
 
-const anonymousImage = "assets/user.png";
+//const anonymousImage = "assets/me.HEIC";
 
 const teamData: TeamMember[] = [
 
@@ -44,6 +44,7 @@ fullDescription:
 "تتولى الإشراف الكامل على المشروع وتنسيق العمل بين مختلف التخصصات لضمان تحقيق رؤية متكاملة تجمع بين الجودة التقنية والإبداع البصري والتنظيم الاحترافي، مع متابعة تطوير المنصة وتحسين تجربة المستخدم بصورة مستمرة.",
 image: anonymousImage,
 category: "الإدارة التنفيذية",
+image: "assets/user.png",
 },
 
 {
@@ -55,6 +56,7 @@ fullDescription:
 "خبير في تطوير الواجهات الأمامية وتصميم النظم البرمجية المعقدة، يسعى دائماً لتحقيق أعلى مستويات الأداء في التطبيقات الرقمية.",
 image: anonymousImage,
 category: "متخصصين برمجة",
+image: "assets/me.png",
 },
 
 {
@@ -66,6 +68,7 @@ fullDescription:
 "يركز على تحويل التصميمات الإبداعية إلى واقع برمجى قابل للاستخدام، مع اهتمام كبير بأدق التفاصيل التقنية.",
 image: anonymousImage,
 category: "متخصصين برمجة",
+image: "assets/user.png",
 },
 
 {
@@ -77,6 +80,7 @@ fullDescription:
 "شغوفة بتطوير الحلول البرمجية المبتكرة وتسهيل التفاعل بين الأنظمة المختلفة لضمان تجربة مستخدم متكاملة.",
 image: anonymousImage,
 category: "متخصصين برمجة",
+image: "assets/user.png",
 },
 
 {
@@ -88,6 +92,7 @@ fullDescription:
 "مبدعة في تصميم تجارب المستخدم التي تجمع بين البساطة والفعالية، مع التركيز على تلبية احتياجات المستخدم وفهم سلوكه.",
 image: anonymousImage,
 category: "متخصصين UI/UX",
+image: "assets/user.png",
 },
 
 {
@@ -99,6 +104,7 @@ fullDescription:
 "تمتلك رؤية فنية فريدة في بناء الهويات البصرية التي تعكس شخصية المشروع وتترك انطباعاً دائماً لدى الجمهور.",
 image: anonymousImage,
 category: "متخصصين UI/UX",
+image: "assets/user.png",
 },
 
 {
@@ -110,6 +116,7 @@ fullDescription:
 "تجمع بين العلم والفن في تصميم الواجهات، لضمان أن كل عنصر بصري يخدم هدفاً وظيفياً وجمالياً في نفس الوقت.",
 image: anonymousImage,
 category: "متخصصين UI/UX",
+image: "assets/user.png",
 },
 
 {
@@ -122,6 +129,7 @@ fullDescription:
 "فنان في سرد القصص البصرية، يمتلك مهارات فائقة في المونتاج وإخراج الفيديوهات التي تأسر الألباب وتعزز قيمة العلامة التجارية.",
 image: anonymousImage,
 category: "متخصص فيديو",
+image: "assets/user.png",
 },
 
 {
@@ -133,6 +141,7 @@ fullDescription:
 "دقيقة في نقل المعلومات وتوثيق كل خطوة في المشروع لضمان استمرارية المعرفة ووضوح الرؤية للفريق والجمهور.",
 image: anonymousImage,
 category: "متخصصين الكتيب والتوثيق",
+image: "assets/user.png",
 },
 
 {
@@ -144,6 +153,7 @@ fullDescription:
 "بارعة في تنظيم المعلومات الكثيفة وتحويلها إلى تقارير وكتيبات سهلة القراءة وجذابة بصرياً.",
 image: anonymousImage,
 category: "متخصصين الكتيب والتوثيق",
+image: "assets/user.png",
 },
 
 {
@@ -155,6 +165,7 @@ fullDescription:
 "تركز على جودة المحتوى وترتيبه المنطقي، مما يسهل على أي شخص فهم أهداف المشروع ومخرجاته بدقة.",
 image: anonymousImage,
 category: "متخصصين الكتيب والتوثيق",
+image: "assets/user.png",
 },
 
 {
@@ -166,6 +177,7 @@ fullDescription:
 "عنصر أساسي في إدارة وتنظيم البيانات والمستندات، يضمن الحفاظ على كافة السجلات والملفات بنظام واحترافية.",
 image: anonymousImage,
 category: "متخصصين الكتيب والتوثيق",
+image: "assets/user.png",
 },
 
 {
@@ -177,6 +189,7 @@ fullDescription:
 "صانعة محتوى بارعة تتقن اختيار الكلمات التي تصل للقلب والعقل، وتدعم أهداف المشروع بأسلوب كتابي جذاب.",
 image: anonymousImage,
 category: "متخصصين المحتوى",
+image: "assets/user.png",
 },
 
 {
@@ -188,6 +201,7 @@ fullDescription:
 "يحلل المحتوى من وجهة نظر المستخدم ليضمن وصول الرسالة بوضوح وفعالية، ويسعى دائماً لتطوير لغة الموقع وتواصله.",
 image: anonymousImage,
 category: "متخصصين المحتوى",
+image: "assets/user.png",
 }
 
 ];
