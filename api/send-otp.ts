@@ -35,12 +35,12 @@ export default async function handler(req: any, res: any) {
 
     // تخزين الكود
     const { error: dbError } = await supabase
-      .from("email_verifications")
-      .insert({
-        email,
-        otp,
-        expires_at: expiryTime
-      });
+  .from("email_verifications")
+  .insert({
+    email: email.trim().toLowerCase(),
+    otp,
+    expires_at: expiryTime
+  });
 
     if (dbError) {
       throw dbError;
