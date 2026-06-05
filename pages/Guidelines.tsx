@@ -92,6 +92,47 @@ const Guidelines: React.FC = () => {
             </AnimatedSection>
           ))}
         </div>
+{/* Gmail Help Section */}
+<div className="max-w-5xl mx-auto mb-28">
+  <AnimatedSection>
+    <div
+      className={`rounded-[32px] overflow-hidden border transition-all duration-500 ${
+        theme === 'dark'
+          ? 'bg-slate-900/60 border-white/10 shadow-2xl backdrop-blur-xl'
+          : 'bg-white/90 border-slate-200 shadow-xl backdrop-blur-xl'
+      }`}
+    >
+      <div className="p-8 text-center">
+        <h2
+          className={`text-2xl md:text-4xl font-bold mb-4 ${
+            theme === 'dark' ? 'text-white' : 'text-slate-900'
+          }`}
+        >
+          كيفية معرفة البريد الإلكتروني الخاص بك
+        </h2>
+
+        <p
+          className={`text-sm md:text-base ${
+            theme === 'dark' ? 'text-slate-400' : 'text-slate-600'
+          }`}
+        >
+          إذا كنت لا تعرف بريد Gmail الخاص بك يمكنك اتباع الخطوات الموضحة بالصورة التالية.
+        </p>
+      </div>
+
+      <div className="w-full">
+        <img
+          src="assets/how-gmail.jpg"
+          alt="كيفية معرفة البريد الإلكتروني"
+          className="w-full object-cover"
+        />
+      </div>
+    </div>
+  </AnimatedSection>
+</div>
+
+
+
 
         {/* FAQ Section */}
         <div className="max-w-4xl mx-auto">
