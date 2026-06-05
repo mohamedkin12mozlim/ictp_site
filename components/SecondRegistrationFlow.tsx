@@ -234,14 +234,14 @@ const latestOTP = data[0];
 };
   const saveToSupabase = async () => {
     try {
-      await supabase.from('Second_registrations').upsert({
-        se_full_name_ar: formData.nameAr,
-        se_full_name_en: formData.nameEn,
-        se_national_id: formData.nationalId,
-        se_phone: formData.whatsapp,
-        se_email: formData.email2,
-        se_college: formData.faculty
-      }]);
+await supabase.from('Second_registrations').upsert({
+  se_full_name_ar: formData.nameAr,
+  se_full_name_en: formData.nameEn,
+  se_national_id: formData.nationalId,
+  se_phone: formData.whatsapp,
+  se_email: formData.email2,
+  se_college: formData.faculty
+});
     } catch (err) {
       console.error(err);
     }
