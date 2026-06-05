@@ -10,13 +10,13 @@ interface FirstRegistrationFormProps {
 
 const FirstRegistrationForm: React.FC<FirstRegistrationFormProps> = ({ data, date }) => {
   const optionalCourses = [
-    'الشبكات Networks',
-    'تطبيقات المحمول Mobile applicaions',
-    'قواعد البيانات Database-Access',
-    'التعلم عن بعد Learnung Distance',
-    'البحث عبر الانترنت Web',
-    'الحوسبة السحابية Cloud Computing',
-  ];
+   '١- الشبكات Networks',
+   '٢- تطبيقات المحمول Mobile Applications',
+   '٣- قواعد البيانات Database Access',
+   '٤- التعلم عن بعد Distance Learning',
+   '٥- البحث عبر الانترنت Web',
+    '٦- الحوسبة السحابية Cloud Computing',
+  ] ;
 
   const pageStyles: React.CSSProperties = {
     color: '#000',
@@ -131,7 +131,7 @@ const FirstRegistrationForm: React.FC<FirstRegistrationFormProps> = ({ data, dat
             </tr>
             <tr>
               <td className="w-[30%] font-bold text-right py-1.5">البريد الالكتروني</td>
-              <td className="w-[70%] font-bold pr-2 uppercase">{data.email}</td>
+              <td className="w-[70%] font-bold pr-2 lowercase">{data.email}</td>
             </tr>
             <tr>
               <td className="w-[30%] font-bold text-right py-1.5">صفة القيد بالجامعة</td>

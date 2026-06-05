@@ -129,7 +129,7 @@ const SecondRegistrationForm: React.FC<SecondRegistrationFormProps> = ({ data, d
             </tr>
             <tr>
               <td className="w-[30%] font-bold text-right py-1.5">البريد الالكتروني</td>
-              <td className="w-[70%] font-bold pr-2 uppercase">{data.email}</td>
+              <td className="w-[70%] font-bold pr-2 lowercase">{data.email}</td>
             </tr>
             <tr>
               <td className="w-[30%] font-bold text-right py-1.5">صفة القيد بالجامعة</td>
