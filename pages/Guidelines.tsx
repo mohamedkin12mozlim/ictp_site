@@ -34,7 +34,7 @@ const Guidelines: React.FC = () => {
   // فيديو التقديم
   const videoGuide = {
     title: t('guidelines.video1'),
-    duration: '4:20',
+    duration: '1:09',
     videoUrl: 'https://www.youtube.com/embed/yaiuXqig-sA'
   };
 
