@@ -351,11 +351,11 @@ const FirstRegistrationFlow: React.FC<FirstRegistrationFlowProps> = ({
 
         <button
           onClick={onBack}
-          className={`ml-4 p-2 rounded-full ${
-            theme === 'dark'
-              ? 'hover:bg-slate-800'
-              : 'hover:bg-gray-100'
-          } transition-colors`}
+className={`ml-4 p-2 rounded-full ${
+  theme === 'dark'
+    ? 'hover:bg-slate-800'
+    : 'hover:bg-gray-100'
+} transition-colors`}
         >
           <ArrowRight
             size={24}
