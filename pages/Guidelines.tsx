@@ -1,4 +1,3 @@
-```tsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
@@ -32,30 +31,30 @@ const Guidelines: React.FC = () => {
       ? 'bg-slate-900/60 border-white/10 shadow-2xl backdrop-blur-xl'
       : 'bg-white/90 border-slate-200 shadow-xl backdrop-blur-xl';
 
-  // فيديو التقديم فقط
+  // فيديو التقديم
   const videoGuide = {
     title: t('guidelines.video1'),
-    duration: "4:20",
-videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
+    duration: '4:20',
+    videoUrl: 'https://www.youtube.com/embed/yaiuXqig-sA'
   };
 
   const faqItems =
     t('guidelines.faqItems') as unknown as {
-      q: string,
-      a: string
+      q: string;
+      a: string;
     }[];
 
   return (
     <div className="relative pt-24 pb-32 px-6 overflow-hidden">
 
       {/* Background */}
-<div
-  className={`absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none -z-10 opacity-30 blur-[100px] ${
-    theme === 'dark'
-      ? 'bg-gradient-to-b from-[#38BDF8]/10 via-transparent to-transparent'
-      : 'bg-gradient-to-b from-[#BBE9FF]/50 via-transparent to-transparent'
-  }`}
-/>
+      <div
+        className={`absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none -z-10 opacity-30 blur-[100px] ${
+          theme === 'dark'
+            ? 'bg-gradient-to-b from-[#38BDF8]/10 via-transparent to-transparent'
+            : 'bg-gradient-to-b from-[#BBE9FF]/50 via-transparent to-transparent'
+        }`}
+      />
 
       <div className="max-w-7xl mx-auto">
 
@@ -87,14 +86,14 @@ videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
           >
             {language === 'ar' ? (
               <>
-                إرشادات{" "}
+                إرشادات{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
                   النظام
                 </span>
               </>
             ) : (
               <>
-                System{" "}
+                System{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
                   Guidelines
                 </span>
@@ -144,8 +143,8 @@ videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
                     size={18}
                     className={
                       theme === 'dark'
-                        ? "text-[#38BDF8]"
-                        : "text-[#002D9C]"
+                        ? 'text-[#38BDF8]'
+                        : 'text-[#002D9C]'
                     }
                   />
 
@@ -241,7 +240,7 @@ videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
               <div className="w-full">
 
                 <img
-                  src="assets/how-gmail.jpg"
+                  src="/assets/how-gmail.jpg"
                   alt="كيفية معرفة البريد الإلكتروني"
                   className="w-full object-cover"
                 />
@@ -284,15 +283,15 @@ videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
                   className={`rounded-[24px] overflow-hidden border transition-all duration-500 ${
                     openIndex === index
                       ? (
-                        theme === 'dark'
-                          ? 'bg-[#1E293B] border-blue-500/30 shadow-lg shadow-blue-500/5'
-                          : 'bg-white border-[#002D9C]/20 shadow-xl shadow-[#002D9C]/5'
-                      )
+                          theme === 'dark'
+                            ? 'bg-[#1E293B] border-blue-500/30 shadow-lg shadow-blue-500/5'
+                            : 'bg-white border-[#002D9C]/20 shadow-xl shadow-[#002D9C]/5'
+                        )
                       : (
-                        theme === 'dark'
-                          ? 'bg-[#1E293B]/40 border-slate-700'
-                          : 'bg-white border-[#002D9C]/10 hover:border-[#002D9C]/20'
-                      )
+                          theme === 'dark'
+                            ? 'bg-[#1E293B]/40 border-slate-700'
+                            : 'bg-white border-[#002D9C]/10 hover:border-[#002D9C]/20'
+                        )
                   }`}
                   whileHover={
                     openIndex !== index
@@ -363,7 +362,7 @@ videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
                           opacity: 0
                         }}
                         animate={{
-                          height: "auto",
+                          height: 'auto',
                           opacity: 1
                         }}
                         exit={{
@@ -427,4 +426,3 @@ videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
 };
 
 export default Guidelines;
-```
