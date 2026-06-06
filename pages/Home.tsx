@@ -222,44 +222,61 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Video Section (REPLACE STEPS) */}
-      <section className="py-40 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <h2 className={`text-4xl md:text-7xl font-black ${titleColor} mb-8 leading-tight`}>
-              {t('home.watchHowTitle')}
-            </h2>
-            <p className={`${subTextColor} text-lg md:text-xl leading-relaxed mb-12`}>
-              {t('guidelines.sub')}
+```tsx
+{/* Video Section */}
+<section className="py-40 px-6 max-w-7xl mx-auto">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+    {/* Text Side */}
+    <div>
+      <h2
+        className={`text-4xl md:text-7xl font-black ${titleColor} mb-8 leading-tight`}
+      >
+        تعرف على مركز التحول الرقمي
+      </h2>
+
+      <p
+        className={`${subTextColor} text-lg md:text-xl leading-relaxed mb-12`}
+      >
+        اكتشف خدمات المركز، الرؤية، وأهم البرامج التدريبية داخل جامعة الفيوم.
+      </p>
+
+      <div className="space-y-6">
+        {[1, 2, 3].map((step) => (
+          <div key={step} className="flex gap-4 items-start">
+            <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-black shrink-0">
+              {step}
+            </div>
+
+            <p className={`font-bold ${titleColor}`}>
+              {step === 1 && "دعم التحول الرقمي داخل الجامعة"}
+              {step === 2 && "تأهيل الطلاب والباحثين لسوق العمل"}
+              {step === 3 && "برامج تدريبية متطورة ومعتمدة"}
             </p>
-            <div className="space-y-6">
-              {[1, 2, 3].map((step) => (
-                <div key={step} className="flex gap-4 items-start">
-                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-black shrink-0">{step}</div>
-                  <p className={`font-bold ${titleColor}`}>{t(`home.feature${step}`)}</p>
-                </div>
-              ))}
-            </div>
           </div>
-          <AnimatedSection>
-            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-3xl group border-8 border-white/5">
-              <img src="/assets/build.JPG" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="relative">
-                  <motion.div 
-                    animate={{ scale: [1, 1.2, 1], opacity: [0, 0.4, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute inset-[-20px] rounded-full bg-blue-600"
-                  />
-                  <button className="w-24 h-24 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors shadow-2xl relative z-10">
-                    <Play fill="white" size={40} className={language === 'ar' ? 'mr-0' : 'ml-2'} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+
+    {/* Video Side */}
+    <AnimatedSection>
+      <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-3xl border-8 border-white/5">
+
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/X_6SPKPc6TE"
+          title="ICTP Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+
+      </div>
+    </AnimatedSection>
+
+  </div>
+</section>
+```
+
 
       {/* Statistics Section (NEW) */}
       <section className="py-40 px-6 relative bg-slate-950 text-white overflow-hidden">
