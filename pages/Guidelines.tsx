@@ -36,7 +36,7 @@ const Guidelines: React.FC = () => {
   const videoGuide = {
     title: t('guidelines.video1'),
     duration: "4:20",
-    videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA""
+videoUrl: "https://www.youtube.com/embed/yaiuXqig-sA"
   };
 
   const faqItems =
@@ -49,13 +49,13 @@ const Guidelines: React.FC = () => {
     <div className="relative pt-24 pb-32 px-6 overflow-hidden">
 
       {/* Background */}
-      <div
-className={`absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none -z-10 opacity-30 blur-[100px] ${
-  theme === 'dark'
-    ? 'bg-gradient-to-b from-[#38BDF8]/10 via-transparent to-transparent'
-    : 'bg-gradient-to-b from-[#BBE9FF]/50 via-transparent to-transparent'
-}`}
-      />
+<div
+  className={`absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none -z-10 opacity-30 blur-[100px] ${
+    theme === 'dark'
+      ? 'bg-gradient-to-b from-[#38BDF8]/10 via-transparent to-transparent'
+      : 'bg-gradient-to-b from-[#BBE9FF]/50 via-transparent to-transparent'
+  }`}
+/>
 
       <div className="max-w-7xl mx-auto">
 
