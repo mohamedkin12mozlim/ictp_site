@@ -55,6 +55,7 @@ className={`absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-event
     ? 'bg-gradient-to-b from-[#38BDF8]/10 via-transparent to-transparent'
     : 'bg-gradient-to-b from-[#BBE9FF]/50 via-transparent to-transparent'
 }`}
+      />
 
       <div className="max-w-7xl mx-auto">
 
