@@ -45,7 +45,7 @@ image: "assets/dr.png",
 category: "الإدارة التنفيذية",
 
 linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
-mail: "mailto:mohm10257@gmail.com",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
 facebook: "https://www.facebook.com/mohamed.mansor.33865854",
 instagram: "https://www.instagram.com/mohameed_._mansour/",
 x: "https://x.com/mohm10257"
@@ -63,7 +63,7 @@ category: "متخصصين برمجة",
 
 
 linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
-mail: "mailto:mohm10257@gmail.com",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
 facebook: "https://www.facebook.com/mohamed.mansor.33865854",
 instagram: "https://www.instagram.com/mohameed_._mansour/",
 x: "https://x.com/mohm10257"
@@ -80,7 +80,7 @@ image: "assets/user boy.png",
 category: "متخصصين برمجة",
 
 linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
-mail: "mailto:mohm10257@gmail.com",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
 facebook: "https://www.facebook.com/mohamed.mansor.33865854",
 instagram: "https://www.instagram.com/mohameed_._mansour/",
 x: "https://x.com/mohm10257"
@@ -97,7 +97,7 @@ image: "assets/user girl.png",
 category: "متخصصين برمجة",
 
 linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
-mail: "mailto:mohm10257@gmail.com",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
 facebook: "https://www.facebook.com/mohamed.mansor.33865854",
 instagram: "https://www.instagram.com/mohameed_._mansour/",
 x: "https://x.com/mohm10257"
@@ -114,7 +114,7 @@ image: "assets/user girl.png",
 category: "متخصصين UI/UX",
 
 linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
-mail: "mailto:mohm10257@gmail.com",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
 facebook: "https://www.facebook.com/mohamed.mansor.33865854",
 instagram: "https://www.instagram.com/mohameed_._mansour/",
 x: "https://x.com/mohm10257"
@@ -167,7 +167,7 @@ image: "assets/user boy.png",
 category: "متخصص فيديو",
 
 linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
-mail: "mailto:mohm10257@gmail.com",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
 facebook: "https://www.facebook.com/mohamed.mansor.33865854",
 instagram: "https://www.instagram.com/mohameed_._mansour/",
 x: "https://x.com/mohm10257"
