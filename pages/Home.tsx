@@ -284,8 +284,8 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <Counter value={12500} label={t('home.statsTrainees')} />
-            <Counter value={45} label={t('home.statsPrograms')} delay={0.2} />
-            <Counter value={150} label={t('home.statsCourses')} delay={0.4} />
+            <Counter value={3} label={t('home.statsPrograms')} delay={0.2} />
+            <Counter value={346} label={t('home.statsCourses')} delay={0.4} />
             <div className="p-10 rounded-[40px] bg-gradient-to-br from-blue-600 to-indigo-700 flex flex-col justify-center items-center text-center shadow-2xl">
               <Award size={48} className="mb-4" />
               <span className="text-2xl font-black uppercase tracking-widest">{t('nav.portal')}</span>
