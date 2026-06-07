@@ -32,6 +32,7 @@ interface TeamMember {
 
 }
 
+const isMobile = window.innerWidth < 768;
 const teamData: TeamMember[] = [
 
 {
@@ -356,31 +357,49 @@ isDark
 
 <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
 
+
+
 <motion.div
-animate={{
-x: [0, 100, 0],
-y: [0, -50, 0],
-scale: [1, 1.2, 1]
-}}
-transition={{
-duration: 20,
-repeat: Infinity,
-ease: "linear"
-}}
-className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-blue-500/10 blur-[120px]"
+animate={
+  !isMobile
+    ? {
+        x: [0, 100, 0],
+        y: [0, -50, 0],
+        scale: [1, 1.2, 1]
+      }
+    : {}
+}
+transition={
+  !isMobile
+    ? {
+        duration: 20,
+        repeat: Infinity,
+        ease: "linear"
+      }
+    : {}
+}
+className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-blue-500/10 md:blur-[120px] blur-[40px]"
 />
 
 <motion.div
-animate={{
-x: [0, -100, 0],
-y: [0, 100, 0],
-scale: [1, 1.3, 1]
-}}
-transition={{
-duration: 25,
-repeat: Infinity,
-ease: "linear"
-}}
+animate={
+  !isMobile
+    ? {
+        x: [0, -100, 0],
+        y: [0, 100, 0],
+        scale: [1, 1.3, 1]
+      }
+    : {}
+}
+transition={
+  !isMobile
+    ? {
+        duration: 25,
+        repeat: Infinity,
+        ease: "linear"
+      }
+    : {}
+}
 className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/10 md:blur-[150px] blur-[40px]"
 />
 
