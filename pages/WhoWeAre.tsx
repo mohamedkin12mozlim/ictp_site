@@ -303,7 +303,7 @@ linkedin: "https://www.linkedin.com/in/omar-sayed-12345678/",
 mail: "mailto:omar.sayed@company.com",
 facebook: "https://www.facebook.com/omar.sayed",
 instagram: "https://www.instagram.com/omar_sayed/",
-x: "https://twitter.com/omar_sayed"S
+x: "https://twitter.com/omar_sayed"
 
 
 }
