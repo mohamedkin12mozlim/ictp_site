@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from './App';
 import { LanguageProvider } from './LanguageContext';
 import { ThemeProvider } from './ThemeContext';
-import { SpeedInsights } from "@vercel/speed-insights"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 const rootElement = document.getElementById('root');
