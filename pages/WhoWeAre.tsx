@@ -381,7 +381,7 @@ duration: 25,
 repeat: Infinity,
 ease: "linear"
 }}
-className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/10 blur-[150px]"
+className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/10 md:blur-[150px] blur-[40px]"
 />
 
 </div>

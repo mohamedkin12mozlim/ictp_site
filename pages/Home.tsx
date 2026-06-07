@@ -73,7 +73,7 @@ const Home: React.FC = () => {
               rotate: [0, 90, 0]
             }}
             transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            className={`absolute top-0 right-0 w-full h-full rounded-full blur-[150px] ${
+            className={`absolute top-0 right-0 w-full h-full rounded-full md:blur-[150px] blur-[40px] ${
               theme === 'dark' ? 'bg-blue-600/10' : 'bg-blue-200/40'
             }`}
           />
