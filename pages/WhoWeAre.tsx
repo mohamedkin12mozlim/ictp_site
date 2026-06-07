@@ -62,11 +62,11 @@ image: "assets/me.png",
 category: "متخصصين برمجة",
 
 
-linkedin: "https://www.linkedin.com/in/mohamed-mansour-12345678/",
-mail: "mailto:mohamed.mansour@company.com",
-facebook: "https://www.facebook.com/mohamed.mansour",
-instagram: "https://www.instagram.com/mohamed_mansour/",
-x: "https://twitter.com/mohamed_mansour"
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "mailto:mohm10257@icloud.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 },
 
 {
