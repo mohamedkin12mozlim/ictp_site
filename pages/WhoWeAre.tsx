@@ -4,8 +4,6 @@ import {
   Linkedin,
   X,
   Mail,
-  Twitter,
-  Youtube,
   Facebook,
   Instagram,
   Monitor,
@@ -29,8 +27,6 @@ interface TeamMember {
   x?: string;
   linkedin?: string;
   mail?: string;
-  twitter?: string;
-  youtube?: string;
   facebook?: string;
   instagram?: string;
 
@@ -50,8 +46,6 @@ category: "الإدارة التنفيذية",
 
 linkedin: "https://www.linkedin.com/in/dr-radwa-amir-salah-sayed-9a1b6520b/",
 mail: "mailto:radwa.amir@company.com",
-twitter: "https://twitter.com/radwa_amir",
-youtube: "https://www.youtube.com/c/RadwaAmir",
 facebook: "https://www.facebook.com/radwa.amir",
 instagram: "https://www.instagram.com/radwa_amir/",
 x: "https://twitter.com/radwa_amir"
@@ -66,6 +60,13 @@ fullDescription:
 "خبير في تطوير الواجهات الأمامية وتصميم النظم البرمجية المعقدة، يسعى دائماً لتحقيق أعلى مستويات الأداء في التطبيقات الرقمية.",
 image: "assets/me.png",
 category: "متخصصين برمجة",
+
+
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-12345678/",
+mail: "mailto:mohamed.mansour@company.com",
+facebook: "https://www.facebook.com/mohamed.mansour",
+instagram: "https://www.instagram.com/mohamed_mansour/",
+x: "https://twitter.com/mohamed_mansour"
 },
 
 {
@@ -77,6 +78,14 @@ fullDescription:
 "يركز على تحويل التصميمات الإبداعية إلى واقع برمجى قابل للاستخدام، مع اهتمام كبير بأدق التفاصيل التقنية.",
 image: "assets/user boy.png",
 category: "متخصصين برمجة",
+
+
+linkedin: "https://www.linkedin.com/in/mohamed-hani-12345678/",
+mail: "mailto:mohamed.hani@company.com",
+facebook: "https://www.facebook.com/mohamed.hani",
+instagram: "https://www.instagram.com/mohamed_hani/",
+x: "https://twitter.com/mohamed_hani"
+
 },
 
 {
@@ -88,6 +97,14 @@ fullDescription:
 "شغوفة بتطوير الحلول البرمجية المبتكرة وتسهيل التفاعل بين الأنظمة المختلفة لضمان تجربة مستخدم متكاملة.",
 image: "assets/user girl.png",
 category: "متخصصين برمجة",
+
+
+linkedin: "https://www.linkedin.com/in/yomna-mohamed-12345678/",
+mail: "mailto:yomna.mohamed@company.com",
+facebook: "https://www.facebook.com/yomna.mohamed",
+instagram: "https://www.instagram.com/yomna_mohamed/",
+x: "https://twitter.com/yomna_mohamed"
+
 },
 
 {
@@ -99,6 +116,14 @@ fullDescription:
 "مبدعة في تصميم تجارب المستخدم التي تجمع بين البساطة والفعالية، مع التركيز على تلبية احتياجات المستخدم وفهم سلوكه.",
 image: "assets/user girl.png",
 category: "متخصصين UI/UX",
+
+
+linkedin: "https://www.linkedin.com/in/menna-mohamed-12345678/",
+mail: "mailto:menna.mohamed@company.com",
+facebook: "https://www.facebook.com/menna.mohamed",
+instagram: "https://www.instagram.com/menna_mohamed/",
+x: "https://twitter.com/menna_mohamed"
+
 },
 
 {
@@ -110,6 +135,14 @@ fullDescription:
 "تمتلك رؤية فنية فريدة في بناء الهويات البصرية التي تعكس شخصية المشروع وتترك انطباعاً دائماً لدى الجمهور.",
 image: "assets/user girl.png",
 category: "متخصصين UI/UX",
+
+
+linkedin: "https://www.linkedin.com/in/manar-mohamed-12345678/",
+mail: "mailto:manar.mohamed@company.com",
+facebook: "https://www.facebook.com/manar.mohamed",
+instagram: "https://www.instagram.com/manar_mohamed/",
+x: "https://twitter.com/manar_mohamed"
+
 },
 
 {
@@ -121,6 +154,15 @@ fullDescription:
 "تجمع بين العلم والفن في تصميم الواجهات، لضمان أن كل عنصر بصري يخدم هدفاً وظيفياً وجمالياً في نفس الوقت.",
 image: "assets/user girl.png",
 category: "متخصصين UI/UX",
+
+
+linkedin: "https://www.linkedin.com/in/taghreed-jamal-12345678/",
+mail: "mailto:taghreed.jamal@company.com",
+facebook: "https://www.facebook.com/taghreed.jamal",
+instagram: "https://www.instagram.com/taghreed_jamal/",
+x: "https://twitter.com/taghreed_jamal"
+
+
 },
 
 {
@@ -133,6 +175,15 @@ fullDescription:
 "فنان في سرد القصص البصرية، يمتلك مهارات فائقة في المونتاج وإخراج الفيديوهات التي تأسر الألباب وتعزز قيمة العلامة التجارية.",
 image: "assets/user boy.png",
 category: "متخصص فيديو",
+
+
+linkedin: "https://www.linkedin.com/in/essam-khaled-12345678/",
+mail: "mailto:essam.khaled@company.com",
+facebook: "https://www.facebook.com/essam.khaled",
+instagram: "https://www.instagram.com/essam_khaled/",
+x: "https://twitter.com/essam_khaled"
+
+
 },
 
 {
@@ -144,6 +195,15 @@ fullDescription:
 "دقيقة في نقل المعلومات وتوثيق كل خطوة في المشروع لضمان استمرارية المعرفة ووضوح الرؤية للفريق والجمهور.",
 image: "assets/user girl.png",
 category: "متخصصين الكتيب والتوثيق",
+
+linkedin: "https://www.linkedin.com/in/menna-hamada-12345678/",
+mail: "mailto:menna.hamada@company.com",
+facebook: "https://www.facebook.com/menna.hamada",
+instagram: "https://www.instagram.com/menna_hamada/",
+x: "https://twitter.com/menna_hamada"
+
+
+
 },
 
 {
@@ -155,6 +215,16 @@ fullDescription:
 "بارعة في تنظيم المعلومات الكثيفة وتحويلها إلى تقارير وكتيبات سهلة القراءة وجذابة بصرياً.",
 image: "assets/user girl.png",
 category: "متخصصين الكتيب والتوثيق",
+
+
+linkedin: "https://www.linkedin.com/in/shourouk-jamil-12345678/",
+mail: "mailto:shourouk.jamil@company.com",
+facebook: "https://www.facebook.com/shourouk.jamil",
+instagram: "https://www.instagram.com/shourouk_jamil/",
+x: "https://twitter.com/shourouk_jamil"
+
+
+
 },
 
 {
@@ -166,6 +236,16 @@ fullDescription:
 "تركز على جودة المحتوى وترتيبه المنطقي، مما يسهل على أي شخص فهم أهداف المشروع ومخرجاته بدقة.",
 image: "assets/user girl.png",
 category: "متخصصين الكتيب والتوثيق",
+
+
+linkedin: "https://www.linkedin.com/in/aya-hussein-12345678/",
+mail: "mailto:aya.hussein@company.com",
+facebook: "https://www.facebook.com/aya.hussein",
+instagram: "https://www.instagram.com/aya_hussein/",
+x: "https://twitter.com/aya_hussein"
+
+
+
 },
 
 {
@@ -177,6 +257,15 @@ fullDescription:
 "عنصر أساسي في إدارة وتنظيم البيانات والمستندات، يضمن الحفاظ على كافة السجلات والملفات بنظام واحترافية.",
 image: "assets/user boy.png",
 category: "متخصصين الكتيب والتوثيق",
+
+linkedin: "https://www.linkedin.com/in/abdelmonem-12345678/",
+mail: "mailto:abdelmonem@company.com",
+facebook: "https://www.facebook.com/abdelmonem",
+instagram: "https://www.instagram.com/abdelmonem/",
+x: "https://twitter.com/abdelmonem"
+
+
+
 },
 
 {
@@ -188,6 +277,15 @@ fullDescription:
 "صانعة محتوى بارعة تتقن اختيار الكلمات التي تصل للقلب والعقل، وتدعم أهداف المشروع بأسلوب كتابي جذاب.",
 image: "assets/user girl.png",
 category: "متخصصين المحتوى",
+
+linkedin: "https://www.linkedin.com/in/mirna-yasser-12345678/",
+mail: "mailto:mirna.yasser@company.com",
+facebook: "https://www.facebook.com/mirna.yasser",
+instagram: "https://www.instagram.com/mirna_yasser/",
+x: "https://twitter.com/mirna_yasser"
+
+
+
 },
 
 {
@@ -199,6 +297,15 @@ fullDescription:
 "يحلل المحتوى من وجهة نظر المستخدم ليضمن وصول الرسالة بوضوح وفعالية، ويسعى دائماً لتطوير لغة الموقع وتواصله.",
 image: "assets/user boy.png",
 category: "متخصصين المحتوى",
+
+
+linkedin: "https://www.linkedin.com/in/omar-sayed-12345678/",
+mail: "mailto:omar.sayed@company.com",
+facebook: "https://www.facebook.com/omar.sayed",
+instagram: "https://www.instagram.com/omar_sayed/",
+x: "https://twitter.com/omar_sayed"S
+
+
 }
 
 ];
@@ -641,7 +748,7 @@ isDark
     href={member.instagram}
     target="_blank"
     rel="noopener noreferrer"
-    className={`p-4 rounded-2xl transition-all ${
+className={`p-4 rounded-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${
       isDark
         ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
         : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
@@ -655,7 +762,7 @@ isDark
     href={member.linkedin}
     target="_blank"
     rel="noopener noreferrer"
-    className={`p-4 rounded-2xl transition-all ${
+    className={`p-4 rounded-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${
       isDark
         ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
         : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
@@ -669,7 +776,7 @@ isDark
     href={member.twitter}
     target="_blank"
     rel="noopener noreferrer"
-    className={`p-4 rounded-2xl transition-all ${
+    className={`p-4 rounded-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${
       isDark
         ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
         : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
@@ -683,7 +790,7 @@ isDark
     href={member.mail}
     target="_blank"
     rel="noopener noreferrer"
-    className={`p-4 rounded-2xl transition-all ${
+    className={`p-4 rounded-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${
       isDark
         ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
         : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
@@ -697,7 +804,7 @@ isDark
     href={member.x}
     target="_blank"
     rel="noopener noreferrer"
-    className={`p-4 rounded-2xl transition-all ${
+className={`p-4 rounded-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${
       isDark
         ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
         : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'

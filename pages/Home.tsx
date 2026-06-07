@@ -222,7 +222,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-```tsx
+
 {/* Video Section */}
 <section className="py-40 px-6 max-w-7xl mx-auto">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -275,7 +275,7 @@ const Home: React.FC = () => {
 
   </div>
 </section>
-```
+
 
 
       {/* Statistics Section (NEW) */}
