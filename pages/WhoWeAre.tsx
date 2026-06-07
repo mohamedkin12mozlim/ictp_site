@@ -4,8 +4,9 @@ import {
   Linkedin,
   Mail,
   Twitter,
-  X,
-  Github,
+  Youtube,
+  Facebook,
+  Instagram,
   Monitor,
   Palette,
   Video,
@@ -23,6 +24,14 @@ interface TeamMember {
   image: string;
   category: string;
   fullDescription?: string;
+
+  Linkedin?: string;
+  Mail?: string;
+  Twitter?: string;
+  Youtube?: string;
+  Facebook?: string;
+  Instagram?: string;
+
 }
 
 const teamData: TeamMember[] = [
@@ -36,6 +45,13 @@ fullDescription:
 "تتولى الإشراف الكامل على المشروع وتنسيق العمل بين مختلف التخصصات لضمان تحقيق رؤية متكاملة تجمع بين الجودة التقنية والإبداع البصري والتنظيم الاحترافي، مع متابعة تطوير المنصة وتحسين تجربة المستخدم بصورة مستمرة.",
 image: "assets/dr.png",
 category: "الإدارة التنفيذية",
+
+Linkedin: "https://www.linkedin.com/in/dr-radwa-amir-salah-sayed-9a1b6520b/",
+Mail: "mailto:radwa.amir@company.com",
+Twitter: "https://twitter.com/radwa_amir",
+Youtube: "https://www.youtube.com/c/RadwaAmir",
+Facebook: "https://www.facebook.com/radwa.amir",
+Instagram: "https://www.instagram.com/radwa_amir/"
 },
 
 {
@@ -602,20 +618,78 @@ isDark
 
 <div className="flex flex-wrap gap-3 md:gap-4 pt-4">
 
-{[Linkedin, Github, Twitter, Mail].map((Icon, i) => (
-
-<button
-key={i}
-className={`p-4 rounded-2xl transition-all ${
-isDark
-? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
-: 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
-}`}
->
-<Icon size={18} />
-</button>
-
-))}
+\\* تنسيق لينكات السوشيال ميديا *\\
+{member.facebook && (
+  <a
+    href={member.facebook}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`p-4 rounded-2xl transition-all ${
+      isDark
+        ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
+        : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
+    }`}
+  >
+    <Facebook size={18} />
+  </a>
+)}
+{member.instagram && (
+  <a
+    href={member.instagram}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`p-4 rounded-2xl transition-all ${
+      isDark
+        ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
+        : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
+    }`}
+  >
+    <Instagram size={18} />
+  </a>
+)}
+{member.linkedin && (
+  <a
+    href={member.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`p-4 rounded-2xl transition-all ${
+      isDark
+        ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
+        : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
+    }`}
+  >
+    <Linkedin size={18} />
+  </a>
+)}
+{member.twitter && (
+  <a
+    href={member.twitter}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`p-4 rounded-2xl transition-all ${
+      isDark
+        ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
+        : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
+    }`}
+  >
+    <Twitter size={18} />
+  </a>
+)}
+{member.mail && (
+  <a
+    href={member.mail}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`p-4 rounded-2xl transition-all ${
+      isDark
+        ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
+        : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
+    }`}
+  >
+    <Mail size={18} />
+  </a>
+)}
+//----------------------------------------------------
 
 </div>
 
