@@ -44,11 +44,11 @@ fullDescription:
 image: "assets/dr.png",
 category: "الإدارة التنفيذية",
 
-linkedin: "https://www.linkedin.com/in/dr-radwa-amir-salah-sayed-9a1b6520b/",
-mail: "mailto:radwa.amir@company.com",
-facebook: "https://www.facebook.com/radwa.amir",
-instagram: "https://www.instagram.com/radwa_amir/",
-x: "https://twitter.com/radwa_amir"
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "mailto:mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 },
 
 {
@@ -79,13 +79,11 @@ fullDescription:
 image: "assets/user boy.png",
 category: "متخصصين برمجة",
 
-
-linkedin: "https://www.linkedin.com/in/mohamed-hani-12345678/",
-mail: "mailto:mohamed.hani@company.com",
-facebook: "https://www.facebook.com/mohamed.hani",
-instagram: "https://www.instagram.com/mohamed_hani/",
-x: "https://twitter.com/mohamed_hani"
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "mailto:mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 },
 
 {
@@ -98,13 +96,11 @@ fullDescription:
 image: "assets/user girl.png",
 category: "متخصصين برمجة",
 
-
-linkedin: "https://www.linkedin.com/in/yomna-mohamed-12345678/",
-mail: "mailto:yomna.mohamed@company.com",
-facebook: "https://www.facebook.com/yomna.mohamed",
-instagram: "https://www.instagram.com/yomna_mohamed/",
-x: "https://twitter.com/yomna_mohamed"
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "mailto:mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 },
 
 {
@@ -117,13 +113,11 @@ fullDescription:
 image: "assets/user girl.png",
 category: "متخصصين UI/UX",
 
-
-linkedin: "https://www.linkedin.com/in/menna-mohamed-12345678/",
-mail: "mailto:menna.mohamed@company.com",
-facebook: "https://www.facebook.com/menna.mohamed",
-instagram: "https://www.instagram.com/menna_mohamed/",
-x: "https://twitter.com/menna_mohamed"
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "mailto:mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 },
 
 {
@@ -136,13 +130,11 @@ fullDescription:
 image: "assets/user girl.png",
 category: "متخصصين UI/UX",
 
-
-linkedin: "https://www.linkedin.com/in/manar-mohamed-12345678/",
-mail: "mailto:manar.mohamed@company.com",
-facebook: "https://www.facebook.com/manar.mohamed",
-instagram: "https://www.instagram.com/manar_mohamed/",
-x: "https://twitter.com/manar_mohamed"
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 },
 
 {
@@ -155,13 +147,11 @@ fullDescription:
 image: "assets/user girl.png",
 category: "متخصصين UI/UX",
 
-
-linkedin: "https://www.linkedin.com/in/taghreed-jamal-12345678/",
-mail: "mailto:taghreed.jamal@company.com",
-facebook: "https://www.facebook.com/taghreed.jamal",
-instagram: "https://www.instagram.com/taghreed_jamal/",
-x: "https://twitter.com/taghreed_jamal"
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 },
 
@@ -176,13 +166,11 @@ fullDescription:
 image: "assets/user boy.png",
 category: "متخصص فيديو",
 
-
-linkedin: "https://www.linkedin.com/in/essam-khaled-12345678/",
-mail: "mailto:essam.khaled@company.com",
-facebook: "https://www.facebook.com/essam.khaled",
-instagram: "https://www.instagram.com/essam_khaled/",
-x: "https://twitter.com/essam_khaled"
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "mailto:mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 },
 
@@ -196,13 +184,13 @@ fullDescription:
 image: "assets/user girl.png",
 category: "متخصصين الكتيب والتوثيق",
 
-linkedin: "https://www.linkedin.com/in/menna-hamada-12345678/",
-mail: "mailto:menna.hamada@company.com",
-facebook: "https://www.facebook.com/menna.hamada",
-instagram: "https://www.instagram.com/menna_hamada/",
-x: "https://twitter.com/menna_hamada"
 
 
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 },
 
@@ -217,13 +205,11 @@ image: "assets/user girl.png",
 category: "متخصصين الكتيب والتوثيق",
 
 
-linkedin: "https://www.linkedin.com/in/shourouk-jamil-12345678/",
-mail: "mailto:shourouk.jamil@company.com",
-facebook: "https://www.facebook.com/shourouk.jamil",
-instagram: "https://www.instagram.com/shourouk_jamil/",
-x: "https://twitter.com/shourouk_jamil"
-
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 },
 
@@ -237,13 +223,11 @@ fullDescription:
 image: "assets/user girl.png",
 category: "متخصصين الكتيب والتوثيق",
 
-
-linkedin: "https://www.linkedin.com/in/aya-hussein-12345678/",
-mail: "mailto:aya.hussein@company.com",
-facebook: "https://www.facebook.com/aya.hussein",
-instagram: "https://www.instagram.com/aya_hussein/",
-x: "https://twitter.com/aya_hussein"
-
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 
 },
@@ -258,12 +242,12 @@ fullDescription:
 image: "assets/user boy.png",
 category: "متخصصين الكتيب والتوثيق",
 
-linkedin: "https://www.linkedin.com/in/abdelmonem-12345678/",
-mail: "mailto:abdelmonem@company.com",
-facebook: "https://www.facebook.com/abdelmonem",
-instagram: "https://www.instagram.com/abdelmonem/",
-x: "https://twitter.com/abdelmonem"
 
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 
 },
@@ -278,12 +262,13 @@ fullDescription:
 image: "assets/user girl.png",
 category: "متخصصين المحتوى",
 
-linkedin: "https://www.linkedin.com/in/mirna-yasser-12345678/",
-mail: "mailto:mirna.yasser@company.com",
-facebook: "https://www.facebook.com/mirna.yasser",
-instagram: "https://www.instagram.com/mirna_yasser/",
-x: "https://twitter.com/mirna_yasser"
 
+
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 
 },
@@ -299,12 +284,13 @@ image: "assets/user boy.png",
 category: "متخصصين المحتوى",
 
 
-linkedin: "https://www.linkedin.com/in/omar-sayed-12345678/",
-mail: "mailto:omar.sayed@company.com",
-facebook: "https://www.facebook.com/omar.sayed",
-instagram: "https://www.instagram.com/omar_sayed/",
-x: "https://twitter.com/omar_sayed"
 
+
+linkedin: "https://www.linkedin.com/in/mohamed-mansour-676b93300/",
+mail: "https://mail.google.com/mail/?view=cm&fs=1&to=mohm10257@gmail.com",
+facebook: "https://www.facebook.com/mohamed.mansor.33865854",
+instagram: "https://www.instagram.com/mohameed_._mansour/",
+x: "https://x.com/mohm10257"
 
 }
 
