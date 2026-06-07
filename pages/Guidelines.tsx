@@ -87,7 +87,7 @@ const Guidelines: React.FC = () => {
             {language === 'ar' ? (
               <>
                 إرشادات{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                <span className="text- bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
                   النظام
                 </span>
               </>
