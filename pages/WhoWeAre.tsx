@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Linkedin,
+  X,
   Mail,
   Twitter,
   Youtube,
@@ -25,6 +26,7 @@ interface TeamMember {
   category: string;
   fullDescription?: string;
 
+  x?: string;
   linkedin?: string;
   mail?: string;
   twitter?: string;
@@ -51,7 +53,8 @@ mail: "mailto:radwa.amir@company.com",
 twitter: "https://twitter.com/radwa_amir",
 youtube: "https://www.youtube.com/c/RadwaAmir",
 facebook: "https://www.facebook.com/radwa.amir",
-instagram: "https://www.instagram.com/radwa_amir/"
+instagram: "https://www.instagram.com/radwa_amir/",
+x: "https://twitter.com/radwa_amir"
 },
 
 {
@@ -687,6 +690,20 @@ isDark
     }`}
   >
     <Mail size={18} />
+  </a>
+)}
+{member.x && (
+  <a
+    href={member.x}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`p-4 rounded-2xl transition-all ${
+      isDark
+        ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
+        : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
+    }`}
+  >
+    <X size={18} />
   </a>
 )}
 
