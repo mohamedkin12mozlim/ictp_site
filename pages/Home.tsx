@@ -283,7 +283,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(41,98,255,0.1),transparent)]" />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Counter value={12500} label={t('home.statsTrainees')} />
+            <Counter value={40200} label={t('home.statsTrainees')} />
             <Counter value={3} label={t('home.statsPrograms')} delay={0.2} />
             <Counter value={346} label={t('home.statsCourses')} delay={0.4} />
             <div className="p-10 rounded-[40px] bg-gradient-to-br from-blue-600 to-indigo-700 flex flex-col justify-center items-center text-center shadow-2xl">
