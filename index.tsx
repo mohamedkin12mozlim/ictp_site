@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import App from './App';
 import { LanguageProvider } from './LanguageContext';
 import { ThemeProvider } from './ThemeContext';
+import { SpeedInsights } from "@vercel/speed-insights/react" ;
+
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -19,6 +21,7 @@ root.render(
       <LanguageProvider>
         <BrowserRouter>
           <App />
+          <SpeedInsights />
         </BrowserRouter>
       </LanguageProvider>
     </ThemeProvider>
