@@ -627,7 +627,7 @@ isDark
     href={member.facebook}
     target="_blank"
     rel="noopener noreferrer"
-    className={`p-4 rounded-2xl transition-all ${
+    className={`p-4 rounded-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${
       isDark
         ? 'bg-white/5 border border-white/10 text-slate-300 hover:bg-blue-500 hover:text-white'
         : 'bg-slate-100 border border-slate-200 text-slate-600 hover:bg-blue-500 hover:text-white'
