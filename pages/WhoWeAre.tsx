@@ -25,12 +25,12 @@ interface TeamMember {
   category: string;
   fullDescription?: string;
 
-  Linkedin?: string;
-  Mail?: string;
-  Twitter?: string;
-  Youtube?: string;
-  Facebook?: string;
-  Instagram?: string;
+  linkedin?: string;
+  mail?: string;
+  twitter?: string;
+  youtube?: string;
+  facebook?: string;
+  instagram?: string;
 
 }
 
@@ -46,12 +46,12 @@ fullDescription:
 image: "assets/dr.png",
 category: "الإدارة التنفيذية",
 
-Linkedin: "https://www.linkedin.com/in/dr-radwa-amir-salah-sayed-9a1b6520b/",
-Mail: "mailto:radwa.amir@company.com",
-Twitter: "https://twitter.com/radwa_amir",
-Youtube: "https://www.youtube.com/c/RadwaAmir",
-Facebook: "https://www.facebook.com/radwa.amir",
-Instagram: "https://www.instagram.com/radwa_amir/"
+linkedin: "https://www.linkedin.com/in/dr-radwa-amir-salah-sayed-9a1b6520b/",
+mail: "mailto:radwa.amir@company.com",
+twitter: "https://twitter.com/radwa_amir",
+youtube: "https://www.youtube.com/c/RadwaAmir",
+facebook: "https://www.facebook.com/radwa.amir",
+instagram: "https://www.instagram.com/radwa_amir/"
 },
 
 {
@@ -618,7 +618,7 @@ isDark
 
 <div className="flex flex-wrap gap-3 md:gap-4 pt-4">
 
-\\* تنسيق لينكات السوشيال ميديا *\\
+{/* تنسيق لينكات السوشيال ميديا */}
 {member.facebook && (
   <a
     href={member.facebook}
@@ -689,7 +689,7 @@ isDark
     <Mail size={18} />
   </a>
 )}
-//----------------------------------------------------
+
 
 </div>
 
