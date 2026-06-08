@@ -330,7 +330,7 @@ className={`rounded-3xl border p-6 md:p-12 ${cardBg} no-print`}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <InputGroup
 label="الاسم الرباعي (بالعربية)"
-placeholder="محمد منصور أحمد محمد"
+placeholder="أدخل الاسم الرباعي بالكامل (٤ أسماء)"
 value={formData.nameAr}
 error={errors.nameAr}
 onChange={(val) => setFormData({ ...formData, nameAr: val })}
@@ -339,7 +339,7 @@ inputBg={inputBg}
 />
 <InputGroup
 label="الاسم الرباعي (بالإنجليزية)"
-placeholder="Mohamed Mansour Ahmed Mohamed"
+placeholder="Enter full name (4 names)"
 value={formData.nameEn}
 error={errors.nameEn}
 onChange={(val) => setFormData({ ...formData, nameEn: val })}
